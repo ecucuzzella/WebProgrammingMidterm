@@ -1,0 +1,40 @@
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 30vw;
+}
+td {
+    border: 3px outset #82653E;
+}
+td:not:first-child {
+    border-left: none;
+}
+#colheadings {
+    background-color: #53774c;
+    text-align: center;
+}
+#weare {
+    font-size: 5vh;
+}
+#openorclosed {
+    text-decoration: underline;
+    text-decoration-color: #bc9c54;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    padding-top: 2vh;
+    margin: 0;
+}
+#locationinfo {
+    border: none;
+    text-align: center;
+}
+td.locations {
+    border: none;
+    width: 20vw; 
+}
