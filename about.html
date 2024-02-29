@@ -7,60 +7,145 @@
         <title>Document</title>
         <link rel="icon" type="image/x-icon" href="images/logo.jpg">
         <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <style>
+                .content { 
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                }
                 .title { 
                         display: flex; 
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
                 }
+                .About-statement { 
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        width: 80%; 
+                        align-items: center;
+                        background-color: #3C602C;
+                }
+                .About-statement img { 
+                        width: 400px; 
+                        height: 400px; 
+                        margin: 20px; 
+                        border: 5px solid #005701; 
+                }
+                .About-statement .text { 
+                        max-width: 800px;
+                        text-align: center;
+                        font-size: 20px;
+                        margin: 20px; 
+                        color: #ffffff; 
+                }
+                .stats { 
+                        /* height: 400px;  */
+                        margin-top: 700px;
+                        margin-bottom: 500px; 
+                }
         </style>
 </head>
 <body>
-        <div class="title">
-                <h1>About EcoEssence</h1>
+        <a href = "about.html"><div class = "logo"></div></a>
+        <div class = "navigation">
+            <div class = "button">
+                <a href = "about.html" class = "navlinks">About</a>
+            </div>
+            <div class = "button">
+                <a href = "mission.html" class = "navlinks">Mission</a>
+            </div>
+            <div class = "button">
+                <a href = "team.html" class = "navlinks">Team</a>
+            </div>
+            <div class = "button">
+                <a href = "locations.html" class = "navlinks">Locations</a>
+            </div>
+            <div class = "button">
+                <a href = "shop.html" class = "navlinks">Shop</a>
+            </div>
+            <div class = "button">
+                <a href = "contact.html" class = "navlinks">Contact</a>
+            </div>
         </div>
-        <div class="About-statement">
-                <div class="text">
-                        <p>
-                        Welcome to EcoEthics, where fashion meets responsibility. At 
-                        EcoEthics, we believe in the transformative power of ethical 
-                        choices in fashion. Our mission is to redefine the way you 
-                        experience clothing by offering a curated collection that 
-                        seamlessly blends style with sustainability.
-                        </p>
-                        <p>
-                        EcoEthics is not just a clothing store; it's a commitment to 
-                        ethical and eco-friendly practices. We recognize the environmental 
-                        impact of the fashion industry and strive to make a positive 
-                        difference. Our curated selection of clothing reflects our 
-                        dedication to using ethically sourced materials, prioritizing fair 
-                        labor practices, and minimizing our ecological footprint.
-                        </p>
-                        <p>
-                        Every piece at EcoEthics tells a story of conscious craftsmanship 
-                        and responsible production. We collaborate with artisans and manufacturers 
-                        who share our values, ensuring that each garment is made with love, 
-                        care, and a deep respect for the planet. From organic fabrics to 
-                        recycled materials, our collection embraces sustainable alternatives 
-                        without compromising on style.
-                        </p>
-                        <p> 
-                        Our commitment to transparency extends to every aspect of our business. 
-                        We believe in empowering our customers with the knowledge they need to 
-                        make informed choices. Through clear labeling and detailed information 
-                        about our supply chain, we invite you to join us on the journey 
-                        towards a more sustainable and ethical future.
-                        </p>
-                        <p> 
-                        EcoEthics is not just a brand; it's a movement. We invite you to 
-                        explore our thoughtfully curated collection, where fashion and 
-                        ethics coexist harmoniously. Join us in making a stylish statement 
-                        that resonates with your values – because at EcoEthics, fashion 
-                        is more than just clothing; it's a conscious choice.
+        <div class="container">
+                <script>
+                        function isScrolledIntoView(elem)
+                        {
+                                var docViewTop = $(window).scrollTop();
+                                var docViewBottom = docViewTop + $(window).height();
+
+                                var elemTop = $(elem).offset().top;
+                                var elemBottom = elemTop + $(elem).height();
+
+                                if((elemTop <= docViewBottom) && (elemTop >= docViewTop)) console.log("EHLLO"); 
+
+                                return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+                        }
+                </script>
+                <div class="content">
+                        <div class="title">
+                                <h1>About EcoEssence</h1>
+                        </div>
+                        <div class="About-statement">
+                                <div class="text">
+                                        <p>
+                                        Welcome to EcoEthics, where fashion meets responsibility. At 
+                                        EcoEthics, we believe in the transformative power of ethical 
+                                        choices in fashion. Our mission is to redefine the way you 
+                                        experience clothing by offering a curated collection that 
+                                        seamlessly blends style with sustainability. 
+                                        EcoEthics is not just a clothing store; it's a commitment to 
+                                        ethical and eco-friendly practices. We recognize the environmental 
+                                        impact of the fashion industry and strive to make a positive 
+                                        difference. Our curated selection of clothing reflects our 
+                                        dedication to using ethically sourced materials, prioritizing fair 
+                                        labor practices, and minimizing our ecological footprint.
+                                        </p>
+                                        <p> 
+                                        EcoEthics is not just a brand; it's a movement. We invite you to 
+                                        explore our thoughtfully curated collection, where fashion and 
+                                        ethics coexist harmoniously. Join us in making a stylish statement 
+                                        that resonates with your values – because at EcoEthics, fashion 
+                                        is more than just clothing; it's a conscious choice.
+                                        </p>
+                                </div>
+                                <img src="images/sustainable.jpg">
+                        </div>
+                        <div class="stats">
+                                <p> By following our eco-friendly mission, we've reduced our carbon footprint by: <span id="footprint"> 0 </span>%</p>
+                        </div>
+                        <script>
+                                function countUp(start, end, id, interval) { 
+                                        let step = end > start ?  1 : -1; 
+
+                                        if (start == end) { 
+                                                document.querySelector("#" + id).innerHTML = end; 
+                                                return; 
+                                        }
+
+                                        let counter = setInterval(function() { 
+                                                start += step; 
+                                                document.querySelector("#" + id).textContent = start; 
+
+                                                if (start == end) clearInterval(counter); 
+                                        }, interval); 
+                                }
+                                $(window).on('scroll', function() {
+                                        if (isScrolledIntoView(".stats")) {
+                                                countUp(0, 50, "footprint", 30);
+                                        }
+                                });
+                        </script>
+                </div>
+                <div class = "footer">
+                        <p id = "footertext">
+                            Est. 2024 <br />
+                            Connect on <a href = "https://www.instagram.com" target = "_blank">Instagram</a> | <a href = "https://twitter.com/?lang=en" target = "_blank">X</a> | <a href = "https://www.facebook.com" target = "_blank">Facebook</a>
                         </p>
                 </div>
-                <img src="images/sustainable.jpg">
         </div>
 
         <!-- SOME SORT OF STATS DOWN HERE ??  -->
