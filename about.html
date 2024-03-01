@@ -45,6 +45,16 @@
                         margin-top: 100px;
                         margin-bottom: 200px;
                 }
+                .stats .number { 
+                        display: flex; 
+                        flex-direction: column;
+                }
+                .stats .number .item{ 
+                        display: flex;
+                        width: 100%; 
+                        justify-content: space-between;
+                        font-size: 20px
+                }
         </style>
 </head>
 <body>
@@ -116,10 +126,22 @@
                         <div class="stats">
                                 <h2> Through our efforts in following our mission, we have: </h2>
                                 <div class="number">
-                                        <p> Reduced our carbon footprint by: <span id="footprint"> 0 </span>%</p>
+                                        <section class="item">
+                                                <p> Reduced our carbon footprint by: </p>
+                                                <p><span id="footprint">50</span> %</p>
+                                        </section>
+                                        <section class="item"> 
+                                                <p> Saved in pounds, non-biodegradable plastic: </p>
+                                                <p><span id="plastic">200</span> Million</p>
+                                        </section>
+                                        <section class="item"> 
+                                                <p> Percent of our clothing ethically sourced: </p>
+                                                <p><span id="clothing">100</span> %</p>
+                                        </section>
                                 </div>
                         </div>
                         <script>
+                                first = true; 
                                 function countUp(start, end, id, interval) { 
                                         let step = end > start ?  1 : -1; 
 
@@ -138,6 +160,9 @@
                                 $(window).on('scroll', function() {
                                         if (isScrolledIntoView(".stats")) {
                                                 countUp(0, 50, "footprint", 30);
+                                                countUp(0, 200, "plastic", 10);
+                                                countUp(0, 100, "clothing", 10); 
+                                                first = false; 
                                         }
                                 });
                         </script>
