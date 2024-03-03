@@ -157,11 +157,11 @@
                                                 if (start == end) clearInterval(counter); 
                                         }, interval); 
                                 }
-                                $(window).on('scroll', function() {
-                                        if (isScrolledIntoView(".stats")) {
+                                $(".content").on('scroll', function() {
+                                        if (isScrolledIntoView(".stats") && first == true) {
                                                 countUp(0, 50, "footprint", 30);
                                                 countUp(0, 200, "plastic", 10);
-                                                countUp(0, 100, "clothing", 10); 
+                                                countUp(0, 100, "clothing", 20); 
                                                 first = false; 
                                         }
                                 });
