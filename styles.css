@@ -94,17 +94,26 @@
                 width: 100%;
                 border: 3px outset #82653E;
                 border-radius: 0px 0px 0px 0px;
+                position: relative;
         }
         div.navigation {
                 width: 100%;
+                position: relative;
+        }
+        div.button:first-child {
+                position: absolute;
+                top: -12vh;
         }
         div.button {
                 width: 100%;
+                margin-top: 0px;
                 border: 3px outset #82653E;
                 border-radius: 0px 0px 0px 0px;
         }
         div.container {
                 width: 100%;
+                position: absolute; 
+                bottom: -100vh;
         }
         div.content {
                 width: 100%;
@@ -112,6 +121,7 @@
         div.footer {
                 width: 100%;
                 left: 0vw;
+                bottom: -20vh;
         }
         a.navlinks {
                 color: black;
