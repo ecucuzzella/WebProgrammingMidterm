@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>EcoEssense</title>
         <link rel="icon" type="image/x-icon" href="images/logo.jpg">
         <link rel="stylesheet" href="styles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -20,6 +20,9 @@
                         justify-content: center;
                         align-items: center;
                 }
+                img { 
+                        border: 5px solid #005701; 
+                }
                 .About-statement { 
                         display: flex;
                         flex-direction: row;
@@ -32,7 +35,6 @@
                         width: 400px; 
                         height: 400px; 
                         margin: 20px; 
-                        border: 5px solid #005701; 
                 }
                 .About-statement .text { 
                         max-width: 800px;
@@ -43,7 +45,7 @@
                 }
                 .stats { 
                         margin-top: 100px;
-                        margin-bottom: 200px;
+                        margin-bottom: 100px;
                 }
                 .stats .number { 
                         display: flex; 
@@ -54,6 +56,61 @@
                         width: 100%; 
                         justify-content: space-between;
                         font-size: 20px
+                }
+                .Our-Team { 
+                        display: flex; 
+                        justify-content: space-around;
+                        width: 100%; 
+                }
+                .Our-Team img { 
+                        max-height: 350px; 
+                        max-width: 350px; 
+                        margin: 10px; 
+                }
+                .Emily p, .Alex p{ 
+                        max-width: 350px; 
+                        color: #000000; 
+                        text-align: center;
+                }
+                #emily, #alex { 
+                        font-size: large;
+                        font-weight: bold;
+                }
+                h3 { 
+                        margin-top: -10px;
+                }
+                .newsletter { 
+                        margin-bottom: 200px;
+                        width: 80%; 
+                        min-height: 200px; 
+                        border: 5px solid #005701; 
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                }
+                #newsletter { 
+                        display: flex;
+                        width: 40%; 
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                }
+                #name { 
+                        display: flex; 
+                }
+                #newsletter input[type="text"], #newsletter input[type="email"]{ 
+                        width: 100%; 
+                        height: 30px; 
+                        border-radius: 10px;
+                }
+                #newsletter input[type="submit"] { 
+                        width: 50%; 
+                        height: 30px; 
+                        border-radius: 10px;
+                }
+                #name-error, #email-error { 
+                        margin: 4px; 
+                        color: red; 
                 }
         </style>
 </head>
@@ -101,27 +158,37 @@
                         <div class="About-statement">
                                 <div class="text">
                                         <p>
-                                        Welcome to EcoEthics, where fashion meets responsibility. At 
-                                        EcoEthics, we believe in the transformative power of ethical 
-                                        choices in fashion. Our mission is to redefine the way you 
-                                        experience clothing by offering a curated collection that 
+                                        Welcome to EcoEthics, where fashion meets 
+                                        responsibility. At EcoEthics, we believe in the 
+                                        transformative power of ethical choices in fashion. 
+                                        Our mission is to redefine the way you experience 
+                                        clothing by offering a curated collection that 
                                         seamlessly blends style with sustainability. 
-                                        EcoEthics is not just a clothing store; it's a commitment to 
-                                        ethical and eco-friendly practices. We recognize the environmental 
-                                        impact of the fashion industry and strive to make a positive 
-                                        difference. Our curated selection of clothing reflects our 
-                                        dedication to using ethically sourced materials, prioritizing fair 
-                                        labor practices, and minimizing our ecological footprint.
+                                        EcoEthics is not just a clothing store; it's a 
+                                        commitment to ethical and eco-friendly practices. 
+                                        We recognize the environmental impact of the fashion 
+                                        industry and strive to make a positive difference. 
+                                        Our curated selection of clothing reflects our 
+                                        dedication to using ethically sourced materials, 
+                                        prioritizing fair labor practices, and minimizing 
+                                        our ecological footprint.
                                         </p>
                                         <p> 
-                                        EcoEthics is not just a brand; it's a movement. We invite you to 
-                                        explore our thoughtfully curated collection, where fashion and 
-                                        ethics coexist harmoniously. Join us in making a stylish statement 
-                                        that resonates with your values – because at EcoEthics, fashion 
-                                        is more than just clothing; it's a conscious choice.
+                                        EcoEthics is not just a brand; it's a movement. 
+                                        We invite you to not just shop but be part of a 
+                                        conscious movement. Explore our thoughtfully 
+                                        curated collection and join us in making a 
+                                        stylish statement that resonates with your values. 
+                                        Elevate your wardrobe with choices that matter – 
+                                        because at EcoEthics, fashion is more than just 
+                                        clothing; it's a conscious choice. Shop now and 
+                                        embrace a sustainable and stylish lifestyle that 
+                                        aligns with your values.
                                         </p>
                                 </div>
-                                <img src="images/sustainable.jpg">
+                                <div class="slideshow">
+                                        <img class="slide" src="images/sustainable.jpg">
+                                </div>
                         </div>
                         <div class="stats">
                                 <h2> Through our efforts in following our mission, we have: </h2>
@@ -166,11 +233,82 @@
                                                 countUp(0, 50, "footprint", 30);
                                                 countUp(0, 200, "plastic", 10);
                                                 countUp(0, 100, "clothing", 20); 
-                                                countUp(0, 66, "work", 10); 
+                                                countUp(0, 66, "work", 30); 
                                                 first = false; 
                                         }
                                 });
                         </script>
+                        <h2 id="founders-title"> Our Founders </h2>
+                        <div class="Our-Team">
+                                <section class="Emily">
+                                        <img src="images/woman.jpg">
+                                        <p id="emily">Emily Harper</p>
+                                        <p>Emily Harper, EcoEthics co-founder, 
+                                        blends her background in environmental 
+                                        science and design to redefine fashion. 
+                                        Passionate about sustainability, Emily 
+                                        creates stylish, eco-friendly garments 
+                                        that reflect her commitment to transforming 
+                                        the industry. A speaker and advocate, she 
+                                        inspires others to embrace a greener, more 
+                                        ethical lifestyle.</p>
+                                </section>
+                                <section class="Alex">
+                                        <img src="images/man.jpg">
+                                        <p id="alex">Alexander "Alex" Mitchell</p>
+                                        <p>Meet Alexander "Alex" Mitchell, the 
+                                        strategic mind behind EcoEthics. With a 
+                                        business background and passion for social 
+                                        responsibility, Alex is dedicated to making a
+                                        positive impact in the world of sustainable 
+                                        fashion. His vision and commitment shape 
+                                        EcoEthics, driving it towards a future where 
+                                        conscious consumerism sets the standard.</p>
+                                </section>
+                        </div>
+                        <h2> Learn More About Us! </h2>
+                        <h3> Sign Up For Our Newsletter </h3>
+                        <div class="newsletter">
+                                <form onsubmit="return validate()" method="get" action="#" id="newsletter">
+                                        <input type="text" name="name" placeholder="Enter Your Name" id="name">
+                                        <p id="name-error"> </p>
+                                        <input type="email" name="email" placeholder="Enter Your Email @ domain.com" id="email">
+                                        <p id="email-error"> </p>
+                                        <input type="submit">
+                                </form>
+                                <script>
+                                        function validate() { 
+                                                goodForm = true; 
+                                                name = document.getElementById("name").value; 
+                                                if(name == "") { 
+                                                        document.getElementById("name").focus(); 
+                                                        document.getElementById("name-error").innerHTML = "Name is Required"; 
+                                                        goodForm = false; 
+                                                }
+                                                else { 
+                                                        document.getElementById("name-error").innerHTML = "";
+                                                }
+
+                                                email = document.getElementById("email").value; 
+                                                if(email == "") { 
+                                                        document.getElementById("email").focus(); 
+                                                        document.getElementById("email-error").innerHTML = "Email is Required"; 
+                                                        goodForm = false; 
+                                                }
+                                                else { 
+                                                        document.getElementById("email-error").innerHTML = "";
+                                                }
+
+                                                if(goodForm) { 
+                                                        alert("Thank You for Signing Up " + name); 
+                                                        document.getElementById("name").value = ""; 
+                                                        document.getElementById("email").value = ""; 
+                                                } 
+
+                                                return goodForm; 
+                                        }
+                                </script>
+                        </div>
                 </div>
                 <div class = "footer">
                         <p id = "footertext">
