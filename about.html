@@ -28,25 +28,32 @@
                         flex-direction: row;
                         justify-content: space-around;
                         width: 80%;
-                        align-items: center;
+                        align-items: left;
                         background-color: #3C602C;
+                        border: solid red;
                         margin: 0 auto; /* Center the container */
                 }
-                #slideshow { 
-                        position: relative;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                }
-                #slideshow img {
-                        position: absolute;
-                        z-index: relative;
-                        width: 350px; /* Set a maximum width to prevent images from becoming too large */
-                        height: 350px; 
-                }
-                #slideshow img#active { 
-                        z-index: relative;
-                }
+                #slideshow {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #slideshow img {
+            /* Remove position: absolute; and right: -80px; */
+            z-index: relative;
+            width: 300px;
+            height: 300px;
+            display: none; /* Hide inactive images */
+            margin-right: 10px;
+        }
+
+        #slideshow img#active {
+            z-index: relative;
+            position: relative;
+            display: flex; /* Show the active image */
+        }
                 .About-statement .text { 
                         max-width: 800px;
                         text-align: center;
@@ -166,22 +173,27 @@
                         <div class="title">
                                 <h1>About EcoEssence</h1>
                         </div>
-                        <script>
-                                function slideShow() { 
-                                        var $active = $('#slideshow #active'); 
-                                        var $next = ($active.next().length > 0) ? $active.next() : $('#slideshow img:first')
+    <script>
+        function slideShow() {
+            var $active = $('#slideshow .active');
+            var $next = ($active.next().length > 0) ? $active.next() : $('#slideshow img:first');
 
-                                        $next.css('z-index', 2); 
-                                        $active.fadeOut(1500, function() { 
-                                                $active.css('z-index', 1).show().removeID('active'); 
-                                                $next.css('z-index', 3).addID('active'); 
-                                        }); 
-                                }
+            $next.css('z-index', 2);
 
-                                $(document).ready(function(){
-                                        setInterval('slideShow()', 7000);
-                                }); 
-                        </script>
+            $active.fadeOut(1500, function () {
+                $active.removeClass('active'); // Remove 'active' class from the current active image
+                $active.css('z-index', 1).hide();
+                $next.addClass('active').css('z-index', 3).fadeIn(); // Add 'active' class to the next image and fadeIn to show it
+            });
+        }
+
+        $(document).ready(function () {
+            // Initially set the first image as active
+            $('#slideshow img:first').addClass('active').show();
+            
+            setInterval(slideShow, 7000);
+        });
+    </script>
                         <div class="About-statement">
                                 <div class="text">
                                         <p>
