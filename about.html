@@ -23,18 +23,29 @@
                 img { 
                         border: 5px solid #005701; 
                 }
-                .About-statement { 
+                .About-statement {
                         display: flex;
                         flex-direction: row;
                         justify-content: space-around;
-                        width: 80%; 
+                        width: 80%;
                         align-items: center;
                         background-color: #3C602C;
+                        margin: 0 auto; /* Center the container */
                 }
-                .About-statement img { 
-                        width: 400px; 
-                        height: 400px; 
-                        margin: 20px; 
+                #slideshow { 
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                }
+                #slideshow img {
+                        position: absolute;
+                        z-index: relative;
+                        width: 350px; /* Set a maximum width to prevent images from becoming too large */
+                        height: 350px; 
+                }
+                #slideshow img#active { 
+                        z-index: relative;
                 }
                 .About-statement .text { 
                         max-width: 800px;
@@ -155,6 +166,22 @@
                         <div class="title">
                                 <h1>About EcoEssence</h1>
                         </div>
+                        <script>
+                                function slideShow() { 
+                                        var $active = $('#slideshow #active'); 
+                                        var $next = ($active.next().length > 0) ? $active.next() : $('#slideshow img:first')
+
+                                        $next.css('z-index', 2); 
+                                        $active.fadeOut(1500, function() { 
+                                                $active.css('z-index', 1).show().removeID('active'); 
+                                                $next.css('z-index', 3).addID('active'); 
+                                        }); 
+                                }
+
+                                $(document).ready(function(){
+                                        setInterval('slideShow()', 7000);
+                                }); 
+                        </script>
                         <div class="About-statement">
                                 <div class="text">
                                         <p>
@@ -186,8 +213,11 @@
                                         aligns with your values.
                                         </p>
                                 </div>
-                                <div class="slideshow">
+                                <div id="slideshow">
+                                        <img class="slide" src="images/clothes4.jpg">
                                         <img class="slide" src="images/sustainable.jpg">
+                                        <img class="slide" src="images/clothes2.jpg">
+                                        <img class="slide" src="images/clothes3.jpg">
                                 </div>
                         </div>
                         <div class="stats">
