@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name = "keywords" content = "sustainable, clothing, environment, ecoessence, shop" />
+        <title>EcoEssense</title>
+        <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+            .content { 
+                display: flex; 
+                flex-direction: column;
+                align-items: center;
+            }
+            form { 
+                width: 80%; 
+                height: 80%; 
+                border: outset #1c5508 5px; 
+                border-radius: 20px;
+                background-color:  #82653E;
+                display: flex; 
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            h2 { 
+                color: white; 
+            }
+            .parts {
+                display: flex;
+                flex-direction: column;
+                width: 50%; 
+            }
+            .parts2 { 
+                display: flex;
+                justify-content: space-between;
+                width: 50%; 
+            }
+            input { 
+                border-radius: 5px;
+            }
+            label { 
+                color: #DADADA; 
+                width: 100%;
+                display: flex; 
+                justify-content: end;
+                font-size: small;
+                margin-bottom: 10px;
+            }
+            a { 
+                margin-top: 10px; 
+            }
+            @media only screen and (max-width: 600px) { 
+                .container { 
+                    bottom: 0px !important; 
+                }
+            }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1> Order Form </h1>
+            <form method="get" action="#" id="order">
+                <h2> Contact Details </h2>
+                <div class="parts2">
+                    <div class="parts">
+                        <input type="text" name="fname">
+                        <label for="fname"> First Name* </label>
+                    </div>
+                    <div class="parts"> 
+                        <input type="text" name="lname">
+                        <label for="lname"> Last Name*</label>
+                    </div>
+                </div>
+                <div class="parts">
+                    <input type="tel" placeholder="555-555-5555" id="phoneinput" name="number">
+                    <label for="number">Phone Number</label>
+                </div>
+                <div class="parts">
+                    <input type="email" placeholder="email@EcoEssence.org" id="emailinput" name="address">
+                    <label for="address"> Email Address*</label>
+                </div>
+                <h2> Billing Address </h2>
+                <div class="parts">
+                    <input type="text" id="street" name="street1">
+                    <label for="street1"> Street Address* </label>
+                </div>
+                <div class="parts">
+                    <input type="text" id="street2" name="street2">
+                    <label for="street2"> Street Address Line 2 </label>
+                </div>
+                <div class="parts2">
+                    <div class="parts">
+                        <input type="text" id="city" name="city">
+                        <label for="city"> City* </label>
+                    </div>
+                    <div class="parts">
+                        <input type="text" id="State" name="State">
+                        <label for="State"> State / Province* </label>
+                    </div>
+                </div>
+                <div class="parts2">
+                    <div class="parts">
+                        <input type="text" id="zip" name="zip">
+                        <label for="zip"> Zip Code* </label>
+                    </div>
+                    <div class="parts">
+                        <select size = '1' name = 'Country' > 
+                            <option>North America</option>
+                            <option>Canada</option>
+                            <option>Mexico</option>
+                        </select>
+                        <label for="Country"> Country* </label>
+                    </div>
+                </div>
+                <h2> Card Information </h2>
+                <div class="parts2">
+                    <div class="parts">
+                        <input type="text" name="fname">
+                        <label for="fname"> First Name* </label>
+                    </div>
+                    <div class="parts"> 
+                        <input type="text" name="lname">
+                        <label for="lname"> Last Name* </label>
+                    </div>
+                </div>
+                <div class="parts">
+                    <input type="password" name="card">
+                    <label for="card"> Card Number* </label>
+                </div>
+                <div class="parts">
+                    <input type="password" name="security">
+                    <label for="security"> Security Code* </label>
+                </div>
+                <div class="parts">
+                    <input type="month" name="month">
+                    <label for="month"> Expiration Date* </label>
+                </div>
+                <input type="submit" value="Purchase" id="buy">
+                <a href="about.html"> Back </a>
+            </form>
+        </div>
+    </div>
+    <script>
+        purchased = document.getElementById("buy"); 
+
+        purchased.onclick = function() { 
+            setTimeout(function() { 
+                alert("Thank You For Your Purchase! Returning to Home Page...");
+                window.location.href = "about.html"; 
+            })
+        }
+    </script>
+</body>
+</html>
