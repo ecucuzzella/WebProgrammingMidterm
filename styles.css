@@ -99,7 +99,7 @@
             text-shadow: 2px 2px 4px #53774c; 
         }
     }
-    @media only screen and (max-width: 750px) {
+    @media only screen and (max-width: 600px) {
         div.logo {
                 width: 100%;
                 border: 3px outset #82653E;
