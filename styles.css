@@ -89,6 +89,16 @@
         color: black;
         text-decoration: underline;
     }
+    @media only screen and (max-width: 1050px) {
+        div.button {
+            overflow: hidden;
+            overflow-wrap: break-word;
+        }
+        div.button:hover {
+            overflow: visible;
+            text-shadow: 2px 2px 4px #53774c; 
+        }
+    }
     @media only screen and (max-width: 600px) {
         div.logo {
                 width: 100%;
