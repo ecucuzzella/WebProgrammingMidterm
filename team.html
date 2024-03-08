@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+                .content { 
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                }
+                .title { 
+                        display: flex; 
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                }
+
+                .inside {
+                    background-color:#53774c; 
+                    color:#FFFFFF; 
+                    margin:auto; 
+                    width:70%; 
+                    border:5px outset #82653E; 
+                    border-radius:20px; 
+                    margin-top:10px; 
+                    padding-bottom:0px; 
+                    height:250px}
+                .ims {
+                    height:220px; 
+                    width:200px; 
+                    margin-top:15px; 
+                    margin-left:30px; 
+                    margin-right:10px;
+                    border-radius:10px
+                }
+                .ims2 {
+                    height:220px; 
+                    width:200px; 
+                    margin-top:15px; 
+                    margin-right:30px; 
+                    border-radius:10px
+                }
+                #team {
+                    color:#000000; margin-bottom:0;
+                }
+                .socials {
+                    height:50px;
+                    width:50px;
+                    margin-top:20px
+                }
+        </style>
+</head>
+<body>
+        <a href = "about.html"><div class = "logo"></div></a>
+        <div class = "navigation">
+            <div class = "button">
+                <a href = "about.html" class = "navlinks">About</a>
+            </div>
+            <div class = "button">
+                <a href = "mission.html" class = "navlinks">Mission</a>
+            </div>
+            <div class = "active2 button">
+                <a href = "team.html" class = "active navlinks">Team</a>
+            </div>
+            <div class = "button">
+                <a href = "locations.html" class = "navlinks">Locations</a>
+            </div>
+            <div class = "button">
+                <a href = "shop.html" class = "navlinks">Shop</a>
+            </div>
+            <div class = "button">
+                <a href = "contact.html" class = "navlinks">Contact</a>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div style="text-align:center;"><h1 id="team">Meet the Team!</h1></div>
+                <div class="inside" style="height:300px">
+                    <img src="images/woman.jpg" style="margin-left:160px" class="ims">
+                    <img src="images/man.jpg" style="margin-left:60px" class="ims"><br/>
+                    <div style="margin-left:16%;float: left;"><h2>Founder, Emily Harper</h2></div><div style="float: right; margin-right:18%"><h2>Founder, Alex Mitchell</h2></div>
+                </div>
+
+                <div class="inside">
+                  <img src="elizabeth.png" align='left' class="ims">
+                  <h2 align='right' style="padding-top:25px; margin:auto; width:90%">Elizabeth is a senior studying Data Science at Tufts University. She is our e-commerce specialist and store manager. Her hometown is Baltimore, Maryland, and her favorite item is the men's jacket!
+                    <div align="right">
+                        <a href = "https://www.instagram.com" target = "_blank"><img class="socials" src="insta.jpg"></a>
+                        <a href = "https://www.linkedin.com/" target = "_blank"><img class="socials" src="Screenshot 2024-03-05 101046.png"></a>
+                      </div></h2><br clear="all" />
+                </div>
+          
+                <div class="inside">
+                  <img src="lily.jpg" align='right' class="ims2">
+                  <h2 align='left' style="padding-top:35px; margin:auto; width:90%">Lily is a sophomore studying Computer Science at Tufts University. She is our designer and production manager. Lily's favorite item are the women's pants!
+                    <div align="left">
+                        <a href = "https://www.instagram.com" target = "_blank"><img class="socials" src="insta.jpg"></a>
+                        <a href = "https://www.linkedin.com/" target = "_blank"><img class="socials" src="Screenshot 2024-03-05 101046.png"></a>
+                      </div></h2><br clear="all" />
+                </div>
+          
+                <div class="inside" style="margin-bottom:100px">
+                  <img src="rachel.png" align='left' class="ims">
+                  <h2 align='right' style="padding-top:5px; width:95%">Rachel is a senior studying Mechanical Engineering at Tufts University. She is our webmaster and social media manager. Her hometown is Medford, MA, and her favorite item is the women's jacket!
+                    <div align="right">
+                        <a href = "https://www.instagram.com" target = "_blank"><img class="socials" src="insta.jpg"></a>
+                        <a href = "https://www.linkedin.com/" target = "_blank"><img class="socials" src="Screenshot 2024-03-05 101046.png"></a>
+                      </div></h2><br clear="all" />
+                </div>
+
+                <div class = "footer">
+                        <p id = "footertext">
+                            Est. 2024 <br />
+                            Connect on <a href = "https://www.instagram.com" target = "_blank">Instagram</a> | <a href = "https://twitter.com/?lang=en" target = "_blank">X</a> | <a href = "https://www.facebook.com" target = "_blank">Facebook</a>
+                        </p>
+                </div>
+        </div>
+</body>
+</html>
