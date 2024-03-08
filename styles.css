@@ -144,3 +144,10 @@
                 font-size: 155%;
         }
 }
+
+.active {
+    color:#FFFFFF !important; 
+}
+.active2 {
+    background-color:#1C5508 !important;
+}
