@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="clothing, sustainable, fashion, ecoessence">
-        <title>Document</title>
+        <title>Our Mission</title>
         <link rel="icon" type="image/x-icon" href="images/logo.jpg">
         <link rel="stylesheet" href="styles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -74,91 +74,88 @@
         }
 
         .About-statement {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-around;
-                        height:400px;
-                        width: 80%;
-                        align-items: left;
-                        background-color: #3C602C;
-                        border: 5px outset #FFFFFF;
-                        border-radius:20px;
-                        margin-left: 10%;
-                        margin-top: 10px;
-                        color:#FFFFFF
-                }
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height:400px;
+            width: 80%;
+            align-items: left;
+            background-color: #3C602C;
+            border: 5px outset #FFFFFF;
+            border-radius:20px;
+            margin-left: 0%;
+            margin-top: 10px;
+            color:#FFFFFF
+        }
 
-                @keyframes blink {
-    0% {opacity: 1;}
-    40% {opacity: 1;}
-    60% {opacity: 0;}
-    100% {opacity: 0;}
-  }
-  .typing-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-}
- .input-cursor {
-      display: inline-block;
-      width: 2px;
-      height: 25px;
-      background-color: #FFFFFF;
-      margin-left: 8px;
-      margin-top:0
-}
-.input-cursor { 
-  animation: blink .6s linear infinite alternate;
-}
+        @keyframes blink {
+            0% {opacity: 1;}
+            40% {opacity: 1;}
+            60% {opacity: 0;}
+            100% {opacity: 0;}
+        }
+        .typing-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .input-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 25px;
+            background-color: #FFFFFF;
+            margin-left: 0px;
+            margin-top:0
+        }
+        .input-cursor { 
+        animation: blink .6s linear infinite alternate;
+        }
+        #type {
+            margin-top:0;
+            margin-bottom:0;
+        }
 
-#type {
-    margin-top:0;
-    margin-bottom:0;
-
-}
-
-table {
-    border-collapse: collapse;
-    margin-left:10%;
-    width:80%;
-}
-
-#t1 {
-    border-top: 5px #FFFFFF solid;
-    border-bottom: 5px #FFFFFF solid;
-    border-left: 5px #FFFFFF solid;
-    border-right: 0px #FFFFFF solid;
-    border-radius:10px;
-    margin:0;
-    padding:0;
-    font-size:25px;
-}
-#t2 {
-    border-top:5px #FFFFFF solid;
-    border-bottom:5px #FFFFFF solid;
-    border-left: 5px #FFFFFF solid;
-    border-right: 5px #FFFFFF solid;
-    background-color:#446032;
-    margin:0;
-    font-size:25px;
-    padding:0
-}
-#t3 {
-    border-top: 5px #FFFFFF solid;
-    border-bottom: 5px #FFFFFF solid;
-    border-left: 0px #FFFFFF solid;
-    border-right: 5px #FFFFFF solid;
-    border-radius:10px;
-    margin:0;
-    padding:0;
-    font-size:25px;
-}
-#val {
-    width:80%;
-    height:auto;
-    border-radius:10px;
-    margin-left:10%;
-}
+        table {
+            border-collapse: collapse;
+            margin-left:10%;
+            width:80%;
+        }
+        #t1 {
+            border-top: 5px #FFFFFF solid;
+            border-bottom: 5px #FFFFFF solid;
+            border-left: 5px #FFFFFF solid;
+            border-right: 0px #FFFFFF solid;
+            border-radius:10px;
+            margin:0;
+            padding:0;
+            font-size:25px;
+        }
+        #t2 {
+            border-top:5px #FFFFFF solid;
+            border-bottom:5px #FFFFFF solid;
+            border-left: 5px #FFFFFF solid;
+            border-right: 5px #FFFFFF solid;
+            background-color:#446032;
+            margin:0;
+            font-size:25px;
+            padding:0
+        }
+        #t3 {
+            border-top: 5px #FFFFFF solid;
+            border-bottom: 5px #FFFFFF solid;
+            border-left: 0px #FFFFFF solid;
+            border-right: 5px #FFFFFF solid;
+            border-radius:10px;
+            margin:0;
+            padding:0;
+            font-size:25px;
+        }
+        #val {
+            width:80%;
+            height:auto;
+            border-radius:10px;
+            margin-left:0%;
+        }
 
         </style>
 </head>
@@ -185,23 +182,18 @@ table {
             </div>
         </div>
 
-
         <div class="container">
+        <div class="content">
             <div style="margin-bottom:0 !important; padding-bottom:0" class="title">
                 <h1 style="margin-bottom:0 !important; padding-bottom:0">Our Mission</h1>
             </div>
             
-            <div style="width:60%; margin-left:20%; background-color:#82653E; border:5px outset #FFFFFF; border-radius:10px;  margin-top:0 !important; padding-top:0" class="typing-container">
+            <div style="width:60%; background-color:#82653E; border:5px outset #FFFFFF; border-radius:10px;  margin-top:0 !important; padding-top:0" class="typing-container">
                 <h2 id="">At EcoEssence, we value:</h2> &nbsp;
                 <h2 id="sentence" class="sentence"></h2>
                 <h2  id="feature-text"></h2>
                 <span id="type" class="input-cursor"></span>
               </div>
-
-           <!--<div class="reveal title">
-                <h2>Where fashion meets responsibility...</h2>
-            </div> -->
-
 
         <script>
             function slideShow() {
@@ -211,19 +203,18 @@ table {
                 $next.css('z-index', 2);
     
                 $active.fadeOut(1500, function () {
-                    $active.removeClass('active'); // Remove 'active' class from the current active image
+                    $active.removeClass('active'); 
                     $active.css('z-index', 1).hide();
-                    $next.addClass('active').css('z-index', 3).fadeIn(); // Add 'active' class to the next image and fadeIn to show it
+                    $next.addClass('active').css('z-index', 3).fadeIn();
                 });
             }
     
             $(document).ready(function () {
-                // Initially set the first image as active
                 $('#slideshow img:first').addClass('active').show();
-                
                 setInterval(slideShow, 7000);
             });
         </script>
+
         <div class="About-statement">
             <div style="text-align:center; margin-top:0;padding-right:0; margin-right:0" id="slideshow">
                 <div><h2>Our History</h2>
@@ -231,6 +222,7 @@ table {
                 <img class="slide" src="images/Screenshot 2024-03-08 222556.png">
                 <img class="slide" src="images/Screenshot 2024-03-08 222635.png"></div>
         </div>
+
         <div style="width:60%">
             <p>In the halls of Tufts University, two environmentally conscious students, Emily Harper and Alex Mitchell, shared a common passion for sustainability and a deep concern for the planet's future. Bonding over their shared values, they envisioned a world where fashion could be both stylish and sustainable.</p>
 
@@ -259,7 +251,6 @@ table {
             }
             return;
             }
-
 
             function waitForMs(ms) {
             return new Promise(resolve => setTimeout(resolve, ms))
@@ -304,7 +295,6 @@ table {
             $( document ).ready(async function() {
             await carousel(carouselText, "#sentence");
             await waitForMs(2000);
-            //deleteSentence("#sentence");
             });
         </script>
 
@@ -320,6 +310,7 @@ table {
                 </tr>
             </table>
         </div>
+    </div>
 
     <div class = "footer">
             <p id = "footertext">
