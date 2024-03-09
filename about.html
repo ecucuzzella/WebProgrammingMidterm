@@ -34,27 +34,45 @@
                         background-color: #3C602C;
                         margin: 0 auto; /* Center the container */
                 }
+                @media only screen and (max-width: 1000px) {
+                    .About-statement { 
+                        flex-direction: column;
+                    }
+                    .About-statement img { 
+                        margin-bottom: 20px;
+                        margin-right: 0px;
+                    }
+                }
+                @media only screen and (max-width: 600px) { 
+                    .About-statement { 
+                        width: 100%; 
+                    }
+                }
+
+                @media only screen and (max-width: 425px)  { 
+                    .About-statement img { 
+                        max-width: 200px; 
+                        max-height: 200px; 
+                    }
+                }
+
                 #slideshow {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: relative;
+                }
 
-        #slideshow img {
-            /* Remove position: absolute; and right: -80px; */
-            z-index: relative;
-            width: 300px;
-            height: 300px;
-            display: none; /* Hide inactive images */
-            margin-right: 10px;
-        }
+                #slideshow img {
+                    width: 300px;
+                    height: 300px;
+                    display: none; 
+                    margin-right: 10px;
+                }
 
-        #slideshow img#active {
-            z-index: relative;
-            position: relative;
-            display: flex; /* Show the active image */
-        }
+                #slideshow img#active {
+                    display: flex; 
+                }
                 .About-statement .text { 
                         max-width: 800px;
                         text-align: center;
@@ -75,6 +93,12 @@
                         width: 100%; 
                         justify-content: space-between;
                         font-size: 20px
+                }
+                @media only screen and (max-width: 720px) { 
+                    .stats { 
+                        max-width: 100%;
+                        margin: 10px 20px; 
+                    }
                 }
                 .Our-Team { 
                         display: flex; 
@@ -98,6 +122,23 @@
                 h3 { 
                         margin-top: -10px;
                 }
+                @media only screen and (max-width: 1000px) { 
+                    .Our-Team { 
+                        flex-direction: column;
+                    }
+                    .Emily, .Alex { 
+                        display: flex;
+                        flex-direction: column;
+                        /* justify-content: center; */
+                        align-items: center;
+                    }
+                }
+                @media only screen and (max-width: 400px) { 
+                    .Our-Team img { 
+                        max-width: 250px; 
+                        max-height: 250px; 
+                    }
+                }
                 .newsletter { 
                         margin-bottom: 200px;
                         width: 80%; 
@@ -111,7 +152,7 @@
                 }
                 #newsletter { 
                         display: flex;
-                        width: 40%; 
+                        width: 60%; 
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
@@ -132,6 +173,11 @@
                 #name-error, #email-error { 
                         margin: 4px; 
                         color: red; 
+                }
+                @media only screen and (max-width: 700px) { 
+                    #newsletter { 
+                        width: 80%; 
+                    }
                 }
         </style>
 </head>
@@ -181,19 +227,17 @@
             var $active = $('#slideshow .active');
             var $next = ($active.next().length > 0) ? $active.next() : $('#slideshow img:first');
 
-            $next.css('z-index', 2);
+            $next.css('z-index', 3);
 
             $active.fadeOut(1500, function () {
-                $active.removeClass('active'); // Remove 'active' class from the current active image
+                $active.removeClass('active'); 
                 $active.css('z-index', 1).hide();
-                $next.addClass('active').css('z-index', 3).fadeIn(); // Add 'active' class to the next image and fadeIn to show it
+                $next.addClass('active').css('z-index', 4).fadeIn(); 
             });
         }
 
         $(document).ready(function () {
-            // Initially set the first image as active
             $('#slideshow img:first').addClass('active').show();
-            
             setInterval(slideShow, 7000);
         });
     </script>

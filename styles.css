@@ -93,10 +93,16 @@
         div.button {
             overflow: hidden;
             overflow-wrap: break-word;
+            font-size: 12px;
         }
         div.button:hover {
             overflow: visible;
             text-shadow: 2px 2px 4px #53774c; 
+        }
+    }
+    @media only screen and (max-width: 700px) { 
+        div.button { 
+                font-size: 10px;
         }
     }
     @media only screen and (max-width: 600px) {
@@ -123,7 +129,7 @@
         div.container {
                 width: 100%;
                 position: absolute; 
-                bottom: -100vh;
+                bottom: -87vh;
         }
         div.content {
                 width: 100%;

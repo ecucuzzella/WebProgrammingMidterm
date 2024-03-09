@@ -51,27 +51,22 @@
                 animation: animate 2s linear forwards;
             }
             #slideshow {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: relative;
+            }
 
-        #slideshow img {
-            /* Remove position: absolute; and right: -80px; */
-            width: 300px;
-            height: 300px;
-            display: none; /* Hide inactive images */
-            margin-right: 10px;
-            float: right;
-            border-radius:10px;
-        }
+            #slideshow img {
+                width: 300px;
+                height: 300px;
+                display: none; 
+                margin-right: 10px;
+            }
 
-        #slideshow img#active {
-            z-index: relative;
-            position: relative;
-            display: flex; /* Show the active image */
-        }
+            #slideshow img#active {
+                display: flex; 
+            }
 
         .About-statement {
             display: flex;
@@ -197,18 +192,18 @@
 
         <script>
             function slideShow() {
-                var $active = $('#slideshow .active');
-                var $next = ($active.next().length > 0) ? $active.next() : $('#slideshow img:first');
-    
-                $next.css('z-index', 2);
-    
-                $active.fadeOut(1500, function () {
-                    $active.removeClass('active'); 
-                    $active.css('z-index', 1).hide();
-                    $next.addClass('active').css('z-index', 3).fadeIn();
+            var $active = $('#slideshow .active');
+            var $next = ($active.next().length > 0) ? $active.next() : $('#slideshow img:first');
+
+            $next.css('z-index', 3);
+
+            $active.fadeOut(1500, function () {
+                $active.removeClass('active'); 
+                $active.css('z-index', 1).hide();
+                $next.addClass('active').css('z-index', 4).fadeIn(); 
                 });
             }
-    
+
             $(document).ready(function () {
                 $('#slideshow img:first').addClass('active').show();
                 setInterval(slideShow, 7000);
