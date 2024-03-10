@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="clothing, sustainable, fashion, ecoessence">
         <title>Contact Us</title>
         <link rel="icon" type="image/x-icon" href="images/logo.jpg">
         <link rel="stylesheet" href="styles.css">
@@ -23,12 +22,10 @@
                 }
                 .f {
                     background-color:#82653E;
-                    width:60%;
-                    height:82vh;
-                    margin-left:18%;
-                    margin-bottom:20px;
+                    width:100%;
+                    height:480px;
                     border: 5px outset #FFFFFF;
-                    border-radius: 20px;
+                    border-radius:20px;
                     color:#FFFFFF;
                 }
                 h1, h3 {
@@ -37,6 +34,10 @@
                 #no_submit {
                     color:#000000;
                 }
+                @media screen and (max-width:425px) {
+                    .f {height:550px !important}   
+                }
+
 
         </style>
 </head>
@@ -63,6 +64,8 @@
             </div>
         </div>
         <div class="container">
+            <div class="content">
+            <div style="padding-bottom:50px">
             <div class="f">
             <form align="center" onsubmit="return validate()" action='#' method='get'>
                 <h1 style="color:#FFFFFF; margin-bottom:10px">Contact Us!</h1>
@@ -97,6 +100,7 @@
 
                 <div id="no_submit"></div>
             </form>
+            </div>
             </div>
                 
             <script>
@@ -140,13 +144,14 @@
                 return valid;
             };
             </script>
-        </div>
 
+        </div>
         <div class = "footer">
                 <p id = "footertext">
                     Est. 2024 <br />
                     Connect on <a href = "https://www.instagram.com" target = "_blank">Instagram</a> | <a href = "https://twitter.com/?lang=en" target = "_blank">X</a> | <a href = "https://www.facebook.com" target = "_blank">Facebook</a>
                 </p>
         </div>
+    </div>
 </body>
 </html>
