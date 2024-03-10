@@ -10,17 +10,33 @@
         <link rel="stylesheet" href="styles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <style>
+            body { 
+                max-width: 100%;
+                /* margin-left: 0px;  */
+                /* margin-right: 0px; */
+            }
             .content { 
                 display: flex; 
                 flex-direction: column;
                 align-items: center;
+                justify-content: center;
+                max-width: 100%;
             }
             form { 
                 width: 80%; 
-                height: 80%; 
+                height: 90%; 
                 border: outset #1c5508 5px; 
                 border-radius: 20px;
                 background-color:  #82653E;
+                display: flex; 
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .form-content { 
+                height: 100%; 
+                border: red solid; 
+                width: 100%; 
                 display: flex; 
                 flex-direction: column;
                 justify-content: center;
@@ -48,14 +64,22 @@
                 display: flex; 
                 justify-content: end;
                 font-size: small;
-                margin-bottom: 10px;
+                margin-bottom: 0px;
+            }
+            h2 { 
+                margin: 2px; 
             }
             a { 
-                margin-top: 10px; 
+                margin-top: 5px; 
             }
             @media only screen and (max-width: 600px) { 
                 .container { 
                     bottom: 0px !important; 
+                }
+            }
+            @media only screen and (max-width: 500px) { 
+                form { 
+                    width: 90%; 
                 }
             }
         </style>
@@ -65,88 +89,90 @@
         <div class="content">
             <h1> Order Form </h1>
             <form onsubmit= "return validate()" method="get" action="#" id="order">
-                <h2> Contact Details </h2>
-                <div class="parts2">
-                    <div class="parts">
-                        <input type="text" name="fname">
-                        <label for="fname" id="fname"> First Name* </label>
-                    </div>
-                    <div class="parts"> 
-                        <input type="text" name="lname">
-                        <label for="lname" id="lname"> Last Name*</label>
-                    </div>
-                </div>
-                <div class="parts">
-                    <input type="tel" placeholder="555-555-5555" id="phoneinput" name="number">
-                    <label for="number" id="number">Phone Number</label>
-                </div>
-                <div class="parts">
-                    <input type="email" placeholder="email@EcoEssence.org" id="emailinput" name="address">
-                    <label for="address" id="address"> Email Address*</label>
-                </div>
-                <h2> Billing Address </h2>
-                <div class="parts">
-                    <input type="text" name="street1">
-                    <label for="street1" id="street1"> Street Address* </label>
-                </div>
-                <div class="parts">
-                    <input type="text" id="street2" name="street2">
-                    <label for="street2" id="street2"> Street Address Line 2 </label>
-                </div>
-                <div class="parts2">
-                    <div class="parts">
-                        <input type="text" name="city">
-                        <label for="city" id="city"> City* </label>
+                <div class="form-content">
+                    <h2> Contact Details </h2>
+                    <div class="parts2">
+                        <div class="parts">
+                            <input type="text" name="fname">
+                            <label for="fname" id="fname"> First Name* </label>
+                        </div>
+                        <div class="parts"> 
+                            <input type="text" name="lname">
+                            <label for="lname" id="lname"> Last Name*</label>
+                        </div>
                     </div>
                     <div class="parts">
-                        <input type="text" name="State">
-                        <label for="State" id="State"> State / Province* </label>
-                    </div>
-                </div>
-                <div class="parts2">
-                    <div class="parts">
-                        <input type="text" name="zip">
-                        <label for="zip" id="zip"> Zip Code* </label>
+                        <input type="tel" placeholder="555-555-5555" id="phoneinput" name="number">
+                        <label for="number" id="number">Phone Number</label>
                     </div>
                     <div class="parts">
-                        <select size = '1' name = 'Country' id="country" > 
-                            <option> Please Select </option>
-                            <option>North America</option>
-                            <option>Canada</option>
-                            <option>Mexico</option>
-                        </select>
-                        <label for="Country" id="countryLabel"> Country* </label>
+                        <input type="email" placeholder="email@EcoEssence.org" id="emailinput" name="address">
+                        <label for="address" id="address"> Email Address*</label>
                     </div>
-                </div>
-                <h2> Card Information </h2>
-                <div class="parts2">
+                    <h2> Billing Address </h2>
                     <div class="parts">
-                        <input type="text" name="fname2">
-                        <label for="fname2" id="fname2"> First Name* </label>
+                        <input type="text" name="street1">
+                        <label for="street1" id="street1"> Street Address* </label>
                     </div>
-                    <div class="parts"> 
-                        <input type="text" name="lname2">
-                        <label for="lname2" id="lname2"> Last Name* </label>
+                    <div class="parts">
+                        <input type="text" id="street2" name="street2">
+                        <label for="street2" id="street2"> Street Address Line 2 </label>
                     </div>
+                    <div class="parts2">
+                        <div class="parts">
+                            <input type="text" name="city">
+                            <label for="city" id="city"> City* </label>
+                        </div>
+                        <div class="parts">
+                            <input type="text" name="State">
+                            <label for="State" id="State"> State / Province* </label>
+                        </div>
+                    </div>
+                    <div class="parts2">
+                        <div class="parts">
+                            <input type="text" name="zip">
+                            <label for="zip" id="zip"> Zip Code* </label>
+                        </div>
+                        <div class="parts">
+                            <select size = '1' name = 'Country' id="country" > 
+                                <option> Select </option>
+                                <option>North America</option>
+                                <option>Canada</option>
+                                <option>Mexico</option>
+                            </select>
+                            <label for="Country" id="countryLabel"> Country* </label>
+                        </div>
+                    </div>
+                    <h2> Card Information </h2>
+                    <div class="parts2">
+                        <div class="parts">
+                            <input type="text" name="fname2">
+                            <label for="fname2" id="fname2"> First Name* </label>
+                        </div>
+                        <div class="parts"> 
+                            <input type="text" name="lname2">
+                            <label for="lname2" id="lname2"> Last Name* </label>
+                        </div>
+                    </div>
+                    <div class="parts">
+                        <input type="password" name="card">
+                        <label for="card" id="card"> Card Number* </label>
+                    </div>
+                    <div class="parts">
+                        <input type="password" name="security">
+                        <label for="security" id="security"> Security Code* </label>
+                    </div>
+                    <div class="parts">
+                        <input type="month" name="month">
+                        <label for="month" id="month"> Expiration Date* </label>
+                    </div>
+                    <div class="parts2">
+                        <input type="reset" id="reset">
+                        <input type="submit" value="Purchase" id="buy">
+                    </div>
+                    
+                    <a href="about.html"> Back </a>
                 </div>
-                <div class="parts">
-                    <input type="password" name="card">
-                    <label for="card" id="card"> Card Number* </label>
-                </div>
-                <div class="parts">
-                    <input type="password" name="security">
-                    <label for="security" id="security"> Security Code* </label>
-                </div>
-                <div class="parts">
-                    <input type="month" name="month">
-                    <label for="month" id="month"> Expiration Date* </label>
-                </div>
-                <div class="parts2">
-                    <input type="reset" id="reset">
-                    <input type="submit" value="Purchase" id="buy">
-                </div>
-                
-                <a href="about.html"> Back </a>
             </form>
         </div>
     </div>
