@@ -41,6 +41,7 @@
         display: flex;
         left: -8.5vw;
         align-items: center;
+        z-index: 10000;
     }
     div.button {
         border: 3px outset #82653E;

@@ -229,6 +229,7 @@
             var $active = $('#slideshow .active');
             var $next = ($active.next().length > 0) ? $active.next() : $('#slideshow img:first');
 
+
             $next.css('z-index', 3);
 
             $active.fadeOut(1500, function () {
