@@ -55,14 +55,13 @@
             display: inline-block;
             float:left;
             margin-left:0 !important;
-            width:30%
+          width:30%
         }
 
         #slideshow img {
-            /* Remove position: absolute; and right: -80px; */
             width: 300px;
             height: 300px;
-            display: none; /* Hide inactive images */
+          display: none; 
             float: center;
             border-radius:10px;
         }
@@ -176,6 +175,10 @@
             padding-bottom:0px; 
             height:510px;
             }
+        
+        @media screen and (max-width: 1200px) {
+            .slide {max-width:100% !important}
+        }
 
         @media screen and (max-width: 600px) {
             .typing-container {width:80% !important; font-size:10px}
